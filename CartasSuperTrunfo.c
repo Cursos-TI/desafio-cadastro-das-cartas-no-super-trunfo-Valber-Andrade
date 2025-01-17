@@ -9,7 +9,9 @@ int main() {
     //Chamando o nome do desafio
     printf("Desafio Super Trunfo - Países\n");
     //Adicionando as variaveis
-    char codigodacidade[5], nome[20], estado;
+    char codigodacidade[5];
+    char nome[20];
+    char estado;
     float populacao;
     float area;
     float pib;
@@ -18,14 +20,16 @@ int main() {
     // Cadastro das Cartas:
     // Pedir ao usuario para informar os dados da cidade, utilizando o printf para fazer a pergunta, e o scanf para armazenar a resposta.
 
-    printf("Qual o nome da cidade?\n");
-    fgets(nome,20,stdin); //Alterado o formato scanf para fgets, para concluir o desafio com nome composto
-   
     printf("Qual a letra do estado?\n");
     scanf("%c", &estado);
 
     printf("Qual o código da cidade?\n");
-    scanf("%s", &codigodacidade);
+    scanf("%s", codigodacidade);
+
+    printf("qual o nome da cidade?\n");
+    //Alterado o formato scanf para fgets, para concluir o desafio com nome composto e adicionando getchar
+    getchar();
+    fgets(nome,20,stdin);
 
     printf("Quantos habitantes a cidade possui?\n");
     scanf("%f", &populacao);
