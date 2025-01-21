@@ -12,7 +12,7 @@ int main() {
     char estado1, estado2;
     char codigodacidade1[5], codigodacidade2[5];
     char nome1[20], nome2[20];
-    float populacao1, populacao2;
+    unsigned int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int pontosturisticos1, pontosturisticos2;
@@ -39,7 +39,7 @@ int main() {
     fgets(nome2,20,stdin);
 
     printf("Quantos habitantes cada cidade possui?\n");
-    scanf("%f %f", &populacao1, &populacao2);
+    scanf("%u %u", &populacao1, &populacao2);
 
     printf("Qual o tamanho da aréa das duas cidades?\n");
     scanf("%f %f", &area1, &area2);
@@ -72,7 +72,7 @@ int main() {
     printf("Letra do Estado: %c \n", estado1);
     printf("O codigo da cidade é: %s \n", codigodacidade1);
     printf("O nome da cidade é: %s", nome1);
-    printf("A cidade possui: %.2f milhões de habitantes.\n", populacao1);
+    printf("A cidade possui: %u milhões de habitantes.\n", populacao1);
     printf("A aréa da cidade é de %.1f Km².\n", area1);
     printf("O PIB da cidade é de: R$%.2f \n", pib1);
     printf("Essa cidade possui: %d pontos turisticos.\n", pontosturisticos1);
