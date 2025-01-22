@@ -32,11 +32,8 @@ int main() {
     printf("Qual o código da primeira cidade e da segunda cidade?\n");
     scanf("%s %s", codigodacidade1, codigodacidade2);
 
-    printf("Qual o nome da primeira cidade e da segunda cidade?\n");
-    //Alterado o formato scanf para fgets, para concluir o desafio com nome composto e adicionando getchar
-    getchar();
-    fgets(nome1,20,stdin);
-    fgets(nome2,20,stdin);
+    printf("Digite a sigla da primeira cidade e da segunda cidade?\n");
+    scanf("%s %s", nome1, nome2);
 
     printf("Quantos habitantes cada cidade possui?\n");
     scanf("%u %u", &populacao1, &populacao2);
@@ -87,7 +84,7 @@ int main() {
     printf("Letra do Estado: %c \n", estado2);
     printf("O codigo da cidade é: %s \n", codigodacidade2);
     printf("O nome da cidade é: %s", nome2);
-    printf("A cidade possui: %.2f milhões de habitantes.\n", populacao2);
+    printf("A cidade possui: %.u milhões de habitantes.\n", populacao2);
     printf("A aréa da cidade é de %.1f Km².\n", area2);
     printf("O PIB da cidade é de: R$%.2f \n", pib2);
     printf("Essa cidade possui: %d pontos turisticos.\n", pontosturisticos2);
