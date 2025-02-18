@@ -3,6 +3,7 @@
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 //Teste Valber
+//Adicionando o exercício no meu repositorio
 
 int main() {
 
