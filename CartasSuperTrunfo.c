@@ -1,14 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-//Teste Valber
-//Adicionando o exercício no meu repositorio
+// Tema 2 - Comparação das Cartas
 
 int main() {
-
-    //Chamando o nome do desafio
-    printf("Desafio Super Trunfo - Países\n");
     //Adicionando as variaveis
     char estado1, estado2;
     char codigodacidade1[5], codigodacidade2[5];
@@ -17,36 +14,48 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontosturisticos1, pontosturisticos2;
-    //Adicionando a variavel de densidade populacional e PIB per capita
     float DensidadePopulacional1, DensidadePopulacional2;
     float PibPerCapita1, PibPerCapita2;
     float SuperPoder1, SuperPoder2;
+    int resultado1, resultado2;
     
     // Cadastro das Cartas:
-    // Pedir ao usuario para informar os dados da cidade, utilizando o printf para fazer a pergunta, e o scanf para armazenar a resposta.
-    
-    //Adicionei um printf para o usuario se orientar a informar os dados da cidade de forma respectiva
-    printf("Adicione os dados das cidades em ordem, primeira cidade depois a segunda cidade\n");
-    printf("Qual o codigo do primeiro estado e do segundo estado?\n");
-    scanf("%c %c", &estado1, &estado2);
+    //Adicionei um printf para o usuario se orientar a informar os dados da cidade
+    printf("Adicione os dados das cidades\n");
+    printf("Qual o codigo do primeiro estado?\n");
+    scanf(" %c", &estado1);
+    printf("Qual o codigo do segundo estado?\n");
+    scanf(" %c", &estado2);
 
-    printf("Qual o código da primeira cidade e da segunda cidade?\n");
-    scanf("%s %s", codigodacidade1, codigodacidade2);
+    printf("Qual o código da primeira cidade?\n");
+    scanf("%s", codigodacidade1);
+    printf("Qual o código da segunda cidade?\n");
+    scanf("%s", codigodacidade2);
 
-    printf("Digite a sigla da primeira cidade e da segunda cidade?\n");
-    scanf("%s %s", nome1, nome2);
+    printf("Digite a sigla da primeira cidade?\n");
+    scanf("%s", nome1);
+    printf("Digite a sigla da segunda cidade?\n");
+    scanf("%s", nome2);
 
-    printf("Quantos habitantes cada cidade possui?\n");
-    scanf("%u %u", &populacao1, &populacao2);
+    printf("Quantos habitantes a cidade %s possui?\n", nome1);
+    scanf("%u", &populacao1);
+    printf("Quantos habitantes a cidade %s possui?\n", nome2);
+    scanf("%u", &populacao2);
 
-    printf("Qual o tamanho da aréa das duas cidades?\n");
-    scanf("%f %f", &area1, &area2);
+    printf("Qual o tamanho da aréa da cidade de %s?\n", nome1);
+    scanf("%f", &area1);
+    printf("Qual o tamanho da aréa da cidade de %s?\n", nome2);
+    scanf("%f", &area2);
 
-    printf("Qual o PIB das duas cidades?\n");
-    scanf("%f %f", &pib1, &pib2);
+    printf("Qual o PIB da cidade %s?\n", nome1);
+    scanf("%f", &pib1);
+    printf("Qual o PIB da cidade %s?\n", nome2);
+    scanf("%f", &pib2);
 
-    printf("Quantos pontos turisticos cada cidade possui?\n");
-    scanf("%d %d", &pontosturisticos1, &pontosturisticos2);
+    printf("Quantos pontos turisticos a cidade %s possui?\n", nome1);
+    scanf("%d", &pontosturisticos1);
+    printf("Quantos pontos turisticos a cidade %s possui?\n", nome2);
+    scanf("%d", &pontosturisticos2);
 
     //Dividindo a população pela area da cidade para ter a densidade populacional de cada uma das cidades
     DensidadePopulacional1 = populacao1 / area1;
